@@ -167,6 +167,13 @@
   .video-meta{padding:18px 20px;}
   .video-meta .src{font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em;}
 
+  /* ===== MY OUTPUTS ===== */
+  .output-card{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:24px; margin-bottom:22px;}
+  .output-head{display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px;}
+  .output-tag{font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--amber); margin-bottom:6px;}
+  .output-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
+  @media (max-width:800px){.output-grid{grid-template-columns:1fr;}}
+
   /* ===== NETIQUETTE CHECKLIST ===== */
   .safety-layout{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
   @media (max-width:900px){.safety-layout{grid-template-columns:1fr;}}
@@ -235,6 +242,7 @@
       <a href="#evolution" data-sec="evolution">Evolution</a>
       <a href="#toolkit" data-sec="toolkit">Toolkit</a>
       <a href="#videos" data-sec="videos">Watch</a>
+      <a href="#myoutputs" data-sec="myoutputs">My Work</a>
       <a href="#safety" data-sec="safety">Stay Safe</a>
       <a href="#quiz" data-sec="quiz">Quiz</a>
     </div>
@@ -400,10 +408,47 @@
   </div>
 </section>
 
+<!-- ============ MY OUTPUTS ============ -->
+<section id="myoutputs">
+  <div class="wrap reveal">
+    <div class="eyebrow">05 · My Work</div>
+    <h2 style="margin-bottom:8px;">Putting it into practice</h2>
+    <p class="muted" style="max-width:64ch; margin-bottom:36px;">Everything above is theory. Here's what I actually built and published using these tools.</p>
+
+    <div class="output-card">
+      <div class="output-head">
+        <div>
+          <div class="output-tag">Video Presentation</div>
+          <h3>My empowerment technology output</h3>
+        </div>
+      </div>
+      <video controls preload="metadata" style="width:100%; border-radius:10px; background:#000;">
+        <source src="my-empowerment-tech-output.mp4" type="video/mp4">
+        Your browser doesn't support embedded video — <a href="my-empowerment-tech-output.mp4">download it here</a> instead.
+      </video>
+    </div>
+
+    <div class="output-grid">
+      <div class="output-card">
+        <div class="output-tag">Animated Video · Powtoon</div>
+        <h3>Powtoon Presentation</h3>
+        <p class="muted" style="font-size:13.5px; margin-bottom:18px;">An animated explainer built and published on Powtoon as part of this unit.</p>
+        <a href="https://www.powtoon.com/s/eiLc31lpvYS/1/m/s" target="_blank" rel="noopener" class="btn">Watch on Powtoon ↗</a>
+      </div>
+      <div class="output-card">
+        <div class="output-tag">Curation Board · Pinterest</div>
+        <h3>Pinterest Profile</h3>
+        <p class="muted" style="font-size:13.5px; margin-bottom:14px;">A curated collection of boards and pins related to this topic.</p>
+        <a data-pin-do="embedUser" href="https://ph.pinterest.com/dustineclark/" data-pin-board-width="400" data-pin-scale-height="240">Follow on Pinterest</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ SAFETY ============ -->
 <section id="safety">
   <div class="wrap reveal">
-    <div class="eyebrow">05 · Stay Safe</div>
+    <div class="eyebrow">06 · Stay Safe</div>
     <h2 style="margin-bottom:8px;">Empowerment cuts both ways</h2>
     <p class="muted" style="max-width:64ch; margin-bottom:36px;">The same tools that let you build a business or reach an audience can also expose you. Netiquette and basic online-safety habits are what keep the trade favorable.</p>
     <div class="safety-layout">
@@ -429,7 +474,7 @@
 <!-- ============ QUIZ ============ -->
 <section id="quiz">
   <div class="wrap reveal">
-    <div class="eyebrow" style="justify-content:center;">06 · Quick Check</div>
+    <div class="eyebrow" style="justify-content:center;">07 · Quick Check</div>
     <h2 style="text-align:center; margin-bottom:36px;">Five questions, one honest score</h2>
     <div class="quiz-box" id="quizBox"></div>
   </div>
@@ -688,5 +733,6 @@ function renderQuiz(){
 renderQuiz();
 }catch(err){ console.error('quiz', err); }
 </script>
+<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
 </body>
 </html>
